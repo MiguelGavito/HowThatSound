@@ -5,7 +5,7 @@ const router = Router();
 const pronunciationController = new PronunciationController();
 
 export const setPronunciationRoutes = () => {
-    router.get('/pronunciation', pronunciationController.getPronunciation);
-    router.get('/similar-words', pronunciationController.getSimilarWords);
+    router.post('/pronunciation', pronunciationController.getPronunciation);
+    router.post('/similar-words', pronunciationController.getSimilarWords);
     return router;
 };

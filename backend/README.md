@@ -16,7 +16,7 @@ The Language Pronunciation App is a web application that allows users to input a
    ```
 2. Navigate to the backend directory:
    ```
-   cd language-pronunciation-app/backend
+   cd backend
    ```
 3. Install the dependencies:
    ```
@@ -28,39 +28,30 @@ To start the backend server, run:
 ```
 npm start
 ```
-The server will be running on `http://localhost:3000`.
+The server will be running on `http://localhost:5000`.
 
 ## API Endpoints
 
 ### Get Pronunciation
-- **Endpoint:** `/api/pronunciation`
-- **Method:** `POST`
-- **Request Body:**
-  ```json
-  {
-    "word": "example",
-    "language": "en",
-    "motherTongue": "es"
-  }
-  ```
+- **Endpoint:** `/pronunciation`
+- **Method:** `GET`
+- **Request Parameters:**
+  - `word`: The word to fetch pronunciation for.
+  - `language`: The language of the word.
+  - `motherTongue`: The user's mother tongue.
 - **Response:**
   ```json
   {
     "pronunciation": "/ɪɡˈzæmpəl/",
-    "differences": "Differences highlighted here."
+    "similarWords": ["example", "sample"]
   }
   ```
 
 ### Get Similar Words
-- **Endpoint:** `/api/pronunciation/similar`
-- **Method:** `POST`
-- **Request Body:**
-  ```json
-  {
-    "word": "example",
-    "language": "en"
-  }
-  ```
+- **Endpoint:** `/similar-words`
+- **Method:** `GET`
+- **Request Parameters:**
+  - `phoneme`: The phoneme to find similar words for.
 - **Response:**
   ```json
   {

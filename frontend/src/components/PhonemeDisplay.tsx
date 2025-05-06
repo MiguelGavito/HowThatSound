@@ -1,3 +1,4 @@
+// filepath: d:\ProyectosCode\HowThatSound\language-pronunciation-app\frontend\src\components\PhonemeDisplay.tsx
 import React from 'react';
 
 interface PhonemeDisplayProps {

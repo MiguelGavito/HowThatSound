@@ -1,4 +1,4 @@
-# Language Pronunciation App
+# Language Pronunciation App - Frontend
 
 This project is a web application that allows users to input a word, select its language and mother tongue, and view the real-time pronunciation using the International Phonetic Alphabet (IPA). The application highlights differences in pronunciation between the two selected languages.
 
@@ -24,7 +24,7 @@ The frontend of the application is built using React and TypeScript. It consists
    ```
 2. Navigate to the frontend directory:
    ```
-   cd language-pronunciation-app/frontend
+   cd frontend
    ```
 3. Install the dependencies:
    ```
@@ -40,30 +40,6 @@ The frontend of the application is built using React and TypeScript. It consists
 - Enter a word in the input field.
 - Select the source and target languages.
 - View the pronunciation in IPA and observe the differences highlighted.
-
-## Backend
-
-The backend of the application is built using Express and TypeScript. It provides endpoints to fetch pronunciation data and similar words based on phonetic analysis.
-
-### Setup Instructions
-
-1. Navigate to the backend directory:
-   ```
-   cd language-pronunciation-app/backend
-   ```
-2. Install the dependencies:
-   ```
-   npm install
-   ```
-3. Start the backend server:
-   ```
-   npm start
-   ```
-
-### API Endpoints
-
-- **GET /pronunciation**: Fetches the pronunciation of a given word.
-- **GET /similar-words**: Returns words that share phonemes with the given word.
 
 ## Contributing
 

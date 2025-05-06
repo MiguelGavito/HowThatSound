@@ -2,10 +2,11 @@ export class PronunciationController {
     constructor(private pronunciationService: PronunciationService) {}
 
     async getPronunciation(req: Request, res: Response): Promise<void> {
-        const { word, language } = req.body;
+        const { word, language, motherTongue } = req.body;
         try {
             const pronunciation = await this.pronunciationService.fetchPronunciation(word, language);
-            res.status(200).json(pronunciation);
+            const similarWords = await this.pronunciationService.findSimilarWords(pronunciation);
+            res.status(200).json({ pronunciation, similarWords });
         } catch (error) {
             res.status(500).json({ error: 'Error fetching pronunciation' });
         }

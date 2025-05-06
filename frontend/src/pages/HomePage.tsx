@@ -8,6 +8,7 @@ const HomePage: React.FC = () => {
     const [sourceLanguage, setSourceLanguage] = useState('');
     const [targetLanguage, setTargetLanguage] = useState('');
     const [pronunciation, setPronunciation] = useState('');
+    const [similarWords, setSimilarWords] = useState<string[]>([]);
 
     const handleWordChange = (newWord: string) => {
         setWord(newWord);
@@ -35,6 +36,7 @@ const HomePage: React.FC = () => {
             />
             <PhonemeDisplay 
                 pronunciation={pronunciation} 
+                similarWords={similarWords} 
             />
         </div>
     );
