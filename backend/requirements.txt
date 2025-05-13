@@ -1,0 +1,23 @@
+# Core dependencies
+fastapi==0.95.2
+uvicorn==0.24.0
+python-dotenv==1.0.0
+pydantic==1.10.12
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+# psycopg2-binary==2.9.9  # Commented out until PostgreSQL is installed
+
+# Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Testing
+pytest==7.4.3
+httpx==0.25.1
+
+# Utilities
+python-dateutil==2.8.2
+requests==2.31.0 
